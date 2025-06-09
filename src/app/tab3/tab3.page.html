@@ -12,30 +12,34 @@
       <ion-title size="large">Tab 3</ion-title>
     </ion-toolbar>
   </ion-header>
-<ion-label>Quanto você gasta com moradia</ion-label>
+  <ion-label>Quanto você gasta com moradia</ion-label>
   <ion-item>
     <ion-input type="number" placeholder="Digite o valor do moradia" [(ngModel)]="moradia"></ion-input>
-  </ion-item>  
+  </ion-item>
   <ion-label>Quanto você gasta com alimentação</ion-label>
   <ion-item>
-    <ion-input type="number" placeholder="Quanto você gasta com alimentacao" [(ngModel)]="alimentacao"></ion-input> 
+    <ion-input type="number" placeholder="Quanto você gasta com alimentacao" [(ngModel)]="alimentacao"></ion-input>
   </ion-item>
   <ion-label>Quanto você gasta com transporte</ion-label>
   <ion-item>
     <ion-input type="number" placeholder="Quanto você gasta com transporte" [(ngModel)]="transporte"></ion-input>
   </ion-item>
-    <ion-label>Quanto você gasta com lazer</ion-label>
+  <ion-label>Quanto você gasta com lazer</ion-label>
   <ion-item>
     <ion-input type="number" placeholder=">Quanto você gasta com lazer" [(ngModel)]="lazer"></ion-input>
   </ion-item>
-     <ion-label>Qual é sua renda liquida</ion-label><br>
-     <ion-label>{{numero7}}</ion-label>
+  <ion-label>Qual é sua renda liquida</ion-label><br>
+  <ion-label>{{numero7}}</ion-label>
   <ion-item>
     <ion-range (ionChange)="onIonChange($event)" [ticks]="true" [snaps]="true" [min]="1400" [max]="12000"></ion-range>
   </ion-item>
   <ion-button expand="block" id="valor-parcela" (click)="Calcular()">Calcular</ion-button>
 
   Valor total de despesas: {{ValorTotal}}
+  <div #palhacada style="width: 20%; height:auto; opacity: 0">
+    <ion-img src="https://img.amiami.com/images/product/main/222/GOODS-04230781.jpg" alt="palhacada"></ion-img>
+  </div>
+</ion-content>
 
 
 
