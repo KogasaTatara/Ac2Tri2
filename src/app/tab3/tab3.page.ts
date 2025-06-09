@@ -39,9 +39,10 @@ export class Tab3Page {
       this.ValorTotal = this.moradia + this.alimentacao + this.transporte + this.lazer;
       animation.play();
       if (this.ValorTotal > this.numero7) {
+        const numeroGrande = Math.max(this.moradia, this.alimentacao, this.transporte, this.lazer);
         const alert = await this.alertController.create({
           header: 'Cuidado',
-          message: 'Você está gastando mais do que você ganha, reveja seus gastos',
+          message: 'Você está gastando mais do que você ganha, reveja seus gastos, tente economizar em: ' + numeroGrande,
           buttons: ['OK']
         });
         await alert.present();
@@ -50,4 +51,3 @@ export class Tab3Page {
     };
   };
 }
-
