@@ -9,9 +9,26 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Tab 2</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-label>Valor do emprestimo</ion-label>
+  <ion-item>
+    <ion-input type="number" placeholder="Digite o valor do emprestimo" [(ngModel)]="emprestimo"></ion-input>
+  </ion-item>  
+  <ion-label>Taxa de juros mensal (em porcentagem)</ion-label>
+  <ion-item>
+    <ion-input type="number" placeholder="Digite a taxa de juros mensal" [(ngModel)]="juros"></ion-input> 
+  </ion-item>
+  <ion-label>número de Parcelas</ion-label>
+  <ion-item>
+    <ion-input type="number" placeholder="Digite o número de parcelas" [(ngModel)]="messes"></ion-input>
+  </ion-item>
+  <ion-button expand="block" id="valor-parcela" (click)="Calcular()">Calcular</ion-button>
+
+
+  Valor da Parcela: {{ValorParcela}} <br>
+  Numero de Parcelas: {{messes}}
+
 </ion-content>

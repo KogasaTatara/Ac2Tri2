@@ -13,5 +13,22 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-label>Valor inicial investido</ion-label>
+  <ion-item>
+    <ion-input type="number" placeholder="Digite o valor do investimento" [(ngModel)]="invest"></ion-input>
+  </ion-item>  
+  <ion-label>Taxa de retorno anual (em porcentagem)</ion-label>
+  <ion-item>
+    <ion-input type="number" placeholder="Digite a taxa de juros mensal" [(ngModel)]="TdJ"></ion-input> 
+  </ion-item>
+  <ion-label>Periodo de investimento (em anos)</ion-label>
+  <ion-item>
+    <ion-input type="number" placeholder="Digite o periodo de investimento" [(ngModel)]="anos"></ion-input>
+  </ion-item>
+  <ion-button expand="block" id="valor-Final" (click)="Calcular()">Calcular</ion-button>
+
+
+  Valor final: {{ValorFinal}} <br>
+  Juros: {{ValorJuros}}
+
 </ion-content>
